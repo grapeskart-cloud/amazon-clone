@@ -12,12 +12,23 @@ import AdminRegister from "./Adminauth/AdminRegister";
 import AdminSendotp from "./Adminauth/AdminSendotp";
 import AdminForgotpassword from "./Adminauth/AdminForgotpassword";
 import AdminResetpassword from "./Adminauth/AdminResetpassword";
+import UserLogin from "./Userauth/UserLogin";
+import UserRegister from "./Userauth/UserRegister";
+import UserForgotPassword from "./Userauth/UserForgotPassword";
+import UserSendOtp from "./Userauth/UserSendOtp";
+import UserResetPassword from "./Userauth/UserResetPassword";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Adminlogin />} />
+        <Route path="/" element={<UserLogin />} />
+        <Route path="/user-login" element={<UserLogin />} />
+        <Route path="/user-register" element={<UserRegister />} />
+        <Route path="/user-forgot-password" element={<UserForgotPassword />} />
+        <Route path="/user-send-otp" element={<UserSendOtp />} />
+        <Route path="/user-reset-password" element={<UserResetPassword />} />
+        <Route path="/adminlogin" element={<Adminlogin />} />
         <Route path="/register" element={<AdminRegister />} />
         <Route path="/send-otp" element={<AdminSendotp />} />
         <Route path="/forgot-password" element={<AdminForgotpassword />} />
