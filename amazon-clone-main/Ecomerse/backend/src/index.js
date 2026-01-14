@@ -23,13 +23,7 @@ app.use(
     credentials: true,
   })
 );
-
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.use(
-  "/public/uploads",
-  express.static(path.join(__dirname, "public/uploads"))
-);
-
 const createUploadDirectories = () => {
   const directories = [
     path.join(__dirname, "uploads", "products"),

@@ -2,8 +2,7 @@ const Product = require("../../models/admin/Product.model");
 
 exports.createProduct = async (req, res) => {
   try {
-    const images =
-      req.files?.map((f) => `/uploads/products/${f.filename}`) || [];
+   const images = req.files.map((f) => `/uploads/products/${f.filename}`);
 
     if (images.length === 0) {
       return res
