@@ -13,6 +13,10 @@ const productRoutes = require("./routes/admin/product.routes");
 const adminSellerRoutes = require("./routes/admin/seller.routes");
 const sellerPerformanceRoutes = require("./routes/admin/sellerPerformance.routes");
 const categoryRoutes = require("./routes/admin/category.routes");
+const pricingRuleRoutes = require("./routes/admin/pricingRule.routes");
+const commissionRoutes = require("./routes/admin/commission.routes");
+const contentmanagementRoutes = require("./routes/admin/cms.routes");
+const orderRoutes = require("./routes/admin/order.routes");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -60,6 +64,10 @@ app.use("/api/products", productRoutes);
 app.use("/api/admin/sellers", adminSellerRoutes);
 app.use("/api/admin/seller-performance", sellerPerformanceRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/admin/pricing-rules", pricingRuleRoutes);
+app.use("/api/admin/commissions", commissionRoutes);
+app.use("/api/admin/cms", contentmanagementRoutes);
+app.use("/api/admin/orders", orderRoutes);
 
 app.get("/api/debug/uploads", (req, res) => {
   try {
